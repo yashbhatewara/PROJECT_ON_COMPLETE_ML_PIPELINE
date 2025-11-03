@@ -3,7 +3,7 @@ stages:
     cmd: python src/data_ingestion.py
     deps:
     - src/data_ingestion.py
-  
+
     outs:
     - data/raw
   data_preprocessing:
@@ -46,3 +46,10 @@ stages:
 # plots:
 # - dvclive/plots/metrics:
 #     x: step
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
